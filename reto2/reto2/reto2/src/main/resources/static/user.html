@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="css/User.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+    <script type="text/javascript" src="js/user.js"></script>  
+    <title>Registrar Usuarios</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Just an image -->
+        <a class="navbar-brand" href="#">
+            <img src="./img/favicon.jpg" width="60" height="60" alt="">
+        </a>
+        <a class="navbar-brand" href="#">WILLY WONKA</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="inicio.html">Home</a>
+            <a class="nav-item nav-link" href="#">Usuarios <span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <br>
+        <button type="button" class="btn btn-Secondary" onclick="nuevo()">Formulario Usuario</button>
+        <br>
+        <br>
+        <br>
+        <div id="tabla"></div>
+    
+    
+        <div class="modal fade" id="modalUser" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tituloModalUser">Actualizar Usuario</h5>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6" >
+                                <label for="id" class="form-label">Id:</label>
+                                <input type="text" class="form-control" id="id" placeholder="id" required>
+                            </div>
+                            <div class="col-sm-12 col-lg-6" >
+                                <label for="identification" class="form-label">Identificacion:</label>
+                                <input type="text" class="form-control" id="identification" placeholder="identification" required>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="name" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="name" placeholder="name"required maxlength="80">
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="address" class="form-label">Direccion:</label>
+                                <input type="text" class="form-control" id="address" placeholder="address"required>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="cellPhone" class="form-label">Telefono:</label>
+                                <input type="number" class="form-control" id="cellPhone" placeholder="cellPhone"required>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="email" class="form-label">Correo:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Correo">
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="password" class="form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="password" placeholder="password" required maxlength="50">
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="zone" class="form-label">Zona:</label>
+                                <input type="text" class="form-control" id="zone" placeholder="zone" required>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="type" class="p3">Tipo Usuario:</label><br>
+                                <select name="type" id="type"class="form-control" required>
+                                    <option selected value="">Selecciona tipo de usuario</option> 
+                                    <option value="COORD">COORD</option>
+                                    <option value="ASER">ASER</option>                                                             
+                                </select >                            
+                            </div>
+                            <input type="hidden" id="accion" >
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <button type="button" class="btn btn-secondary" onclick="guardarCambios()">Guardar</button>
+                        <button type="button" class="btn btn-dark" onclick="cerrarModal()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tituloModalUser">Mensaje</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p id="mensaje">
+    
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="cerrarModalMensaje()">Cerrar</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="modalMensajeConfirmacion" tabindex="-1" role="dialog">
+        
+        </div>
+    
+    </div>
+    
+    
+</body>
+
+</html>

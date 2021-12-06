@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background: url(tabla.jpg) no-repeat center center fixed;
+    background-size: 100% 100%; 
+    height: 100%
+  }
+ 
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login
+    .container
+    #login-row
+    #login-column
+    #login-box
+    #login-form
+    #register-link {
+    margin-top: -85px;
+  }

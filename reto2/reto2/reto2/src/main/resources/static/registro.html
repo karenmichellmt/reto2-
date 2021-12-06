@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" /> -->
+    <link rel="stylesheet" href="css/registro.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/registro.js"></script>
+    <title>Registrar Usuario</title>
+
+    <style>
+        
+        #logo {
+          width: 350px;
+          height: 150px;
+          background: url(logo.jpg) 0 0;
+        }
+
+        .p1 {
+            font-family: "Copperplate", Fantasy;
+            font-size: 60px;
+            color: rgb(255, 255, 255);
+         
+        }
+        .p2 {
+            font-family: "Papyrus", Fantasy;
+            font-size: 30px;
+            color: rgb(12, 4, 4);
+        }
+        .p3 {
+            font-family: "Georgia", Serif;
+            font-size: 15px;
+            color: rgb(27, 25, 25);
+        }
+    </style>
+
+<link rel="icon" type="image/jpg" href="./img/favicon.jpg">
+        
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Just an image -->
+            <a class="navbar-brand" href="#">
+               <img src="./img/favicon.jpg" width="60" height="60" alt="">
+            </a>
+        <div class="col-sm-12">
+          <a class="navbar-brand" >WILLY WONKA</a>
+        </div>
+        </div>
+      </nav>
+    <div id="login">
+            <h1 class="p1 text-center"> WILLY WONKA</h1>
+        <center>
+            <img id="logo" src="logo.jpg" width="1" height="1">
+        </center>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <center>
+                            <h3 class="p2">Crear Cuenta</h3>
+                        </center>
+                            <div class="form-group">
+                                <label for="username" class="p3">Nombre:</label><br />
+                                <input type="username" name="username" id="username" class="form-control" required maxlength="80"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="useremail" class="p3">E-mail:</label><br />
+                                <input type="email" name="useremail" id="useremail" class="form-control" required maxlength="50"/>
+                                <span id="badEmail" class="badEmail" style="display:none"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="p3">Contraseña:</label><br />
+                                <input type="password" name="password" id="password" class="form-control" required maxlength="50"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordrepeat" class="p3">Confirmar tu Contraseña:</label><br />
+                                <input type="password" name="passwordrepeat" id="passwordrepeat" class="form-control" required maxlength="50"/>
+                            </div>
+                            <div class="form-group text-center">
+                                <input type="button" name="submit" class="btn btn-md" value="Crear" onclick="crearUsuario()" />  
+                                                              
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="remember-me" class="p3">
+                                    <span>Ya tienes una cuenta? <a href="index.html" class="p3">Inicia sesion aqui</a></span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
